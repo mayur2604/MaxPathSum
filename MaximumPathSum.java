@@ -13,21 +13,21 @@ public class Main
          input.add(s);
         }
         String res[]=input.get(input.size()-1).split(" ");
-        int arr[][]=new int[input.size()][res.length];
+        int inputArr[][]=new int[input.size()][res.length];
         int i=0;
         for(String t:input){
             String temp[]=t.split(" ");
             for(int j=0;j<temp.length;j++){
-                arr[i][j]=Integer.parseInt(temp[j]);
+                inputArr[i][j]=Integer.parseInt(temp[j]);
             }
             i++;
         }
-        for(int i1=arr.length-2;i1>=0;i1--){
-            for(int j=0;j<arr[i1].length-1;j++){
-                arr[i1][j]+=Math.max(arr[i1+1][j],arr[i1+1][j+1]);
+        for(int row=inputArr.length-2;row>=0;row--){
+            for(int column=0;column<inputArr[row].length-1;column++){
+                inputArr[row][column]+=Math.max(inputArr[row+1][column],inputArr[row+1][column+1]);
             }
         }
-        System.out.println(arr[0][0]);
+        System.out.println(inputArr[0][0]);
     }
 }
 
