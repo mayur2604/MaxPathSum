@@ -12,8 +12,8 @@ public class Main
         while((s=br.readLine())!=null){
          input.add(s);
         }
-        String res[]=input.get(input.size()-1).split(" ");
-        int inputArr[][]=new int[input.size()][res.length];
+        int columns=input.get(input.size()-1).split(" ").length;
+        int inputArr[][]=new int[input.size()][columns];
         int i=0;
         for(String t:input){
             String temp[]=t.split(" ");
