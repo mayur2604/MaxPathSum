@@ -9,7 +9,6 @@ public class Main
         BufferedReader br = new BufferedReader(new FileReader(file));
         String s="";
         List<String> input =new ArrayList<>();
-        int max=0;
         while((s=br.readLine())!=null){
          input.add(s);
         }
